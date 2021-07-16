@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:eml2html.helloWorld"
+		"onCommand:eml2html.convert"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "eml2html.helloWorld",
-				"title": "Hello World"
+				"command": "eml2html.convert",
+				"title": "eml2html: convert body of email"
 			}
 		]
 	},
