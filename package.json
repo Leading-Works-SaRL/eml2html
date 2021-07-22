@@ -2,6 +2,8 @@
 	"name": "eml2html",
 	"displayName": "eml2html",
 	"description": "A utility to convert an EML file to an HTML content using the clipboard conveniently.",
+	"publisher": "leading-works",
+	"repository": "git@github.com:Leading-Works-SaRL/eml2html.git",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.58.0"
