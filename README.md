@@ -1,65 +1,48 @@
 # eml2html README
 
-This is the README for your extension "eml2html". After writing up a brief description, we recommend including the following sections.
+eml2html is a simple visual studio code/codium extension that enables the conversion of EML email files to their HTML equivalent, using a simple and convenient copy-paste interface.
 
-## Features
+## How to use
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Simply copy the content of your EML file, hit `CMD+SHIFT+P` or the equivalent for your preferred OS, write `eml2html` and convert the EML file; the result is copied in your clipbboard and you can paste it whereever you want.
 
-For example if there is an image subfolder under your extension project workspace:
+## Install
 
-\!\[feature X\]\(images/feature-x.png\)
+The extension is available on the [Eclipse Foundation Open VSX library](https://open-vsx.org/).
+In order to install it, you may check add a custom `product.json` pointing to the Open-VSX library or use an alternate method as describe in [this resolved issue]().
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### Using a custom `product.json` file
 
-## Requirements
+> See also [this documentation](https://github.com/eclipse/openvsx/wiki/Using-Open-VSX-in-VS-Code)
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. create a `product.json` at the documented location for your preferred OS:
 
-## Extension Settings
+   * Windows: `%USER%\AppData\Roaming\VSCodium`
+   * macOS: `~/Library/Application Support/VSCodium`
+   * Linux: `~/.config/VSCodium`
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+2. add this content:
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+```json
+{
+  "extensionsGallery": {
+    "serviceUrl": "https://open-vsx.org/vscode/gallery",
+    "itemUrl": "https://open-vsx.org/vscode/item"
+  },
+  "linkProtectionTrustedDomains": [
+    "https://open-vsx.org"
+  ]
+}
+```
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Atm the extension offers to convert only the body of the email.
+Extending it to offer more options is trivial but not needed for the author of the extension.
+Do not hesitate to create an issue or a PR to improved the features of the extension.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.0.1
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Initial release of `eml2html`.
