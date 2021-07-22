@@ -9,7 +9,7 @@ Simply copy the content of your EML file, hit `CMD+SHIFT+P` or the equivalent fo
 ## Install
 
 The extension is available on the [Eclipse Foundation Open VSX library](https://open-vsx.org/).
-In order to install it, you may check add a custom `product.json` pointing to the Open-VSX library or use an alternate method as describe in [this resolved issue]().
+In order to install it, you may check add a custom `product.json` pointing to the Open-VSX library or use an alternate method as describe in [this resolved issue](https://github.com/VSCodium/vscodium/pull/674).
 
 ### Using a custom `product.json` file
 
